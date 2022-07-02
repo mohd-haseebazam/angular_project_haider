@@ -1,0 +1,22 @@
+<div class="blog-div">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title">{{ blogDetail?.name | titlecase }}</h2>
+      <h5 class="card-subtitle mb-2 text-muted">
+        {{ blogDetail?.description | titlecase }}
+      </h5>
+      <p class="card-text">
+        {{ blogDetail?.content }}
+      </p>
+      <p class="card-text">
+        written by <b>{{ blogDetail?.writtenBy | titlecase }}</b> on
+        <b>{{ blogDetail?.writtenDate }}</b>
+      </p>
+      <button class="btn btn-light float-left" routerLink="/bloglist">
+        Back
+      </button>
+
+      <button class="btn btn-primary float-right" (click)="onEdit()">Want to Edit?</button>
+    </div>
+  </div>
+</div>

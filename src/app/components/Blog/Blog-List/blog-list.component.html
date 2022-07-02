@@ -1,0 +1,33 @@
+<router-outlet></router-outlet>
+<div
+  *ngFor="let blog of blogs"
+  class="d-flex flex-row justify-content-around blog-div"
+>
+  <div class="card border" style="width: 20rem">
+    <div class="card-body">
+      <h4 class="card-title">{{ blog.name | titlecase }}</h4>
+      <h6 class="card-subtitle mb-2 text-muted">
+        {{ blog.description | titlecase }}
+      </h6>
+      <h6 class="card-subtitle mb-2 text-muted">
+        <span class="text">written by </span>{{ blog.writtenBy | titlecase }}
+      </h6>
+      <h6 class="card-subtitle mb-2 text-muted">
+        <span class="text">written date </span>{{ blog.writtenDate }}
+      </h6>
+
+      <a
+        (click)="onReadmore(blog.id)"
+        class="btn btn-primary card-link readMoreLink"
+        >Read More</a
+      >
+    </div>
+  </div>
+</div>
+
+<button 
+  type="button" 
+  class="btn btn-secondary btn-lg"
+  routerLink='/editblog'
+  >Add Blog</button>
+

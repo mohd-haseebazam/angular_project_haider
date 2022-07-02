@@ -1,0 +1,60 @@
+<div class="blog-div">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon3">Title: </span>
+        </div>
+        <input 
+            type="text" 
+            class="form-control" 
+            id="basic-url" 
+            aria-describedby="basic-addon3" 
+            value='{{blogDetail.name | titlecase}}'
+            #titleRef
+        />
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon3">Description: </span>
+        </div>
+        <input 
+            type="text" 
+            class="form-control" 
+            id="basic-url" 
+            aria-describedby="basic-addon3" 
+            value='{{blogDetail.description | titlecase}}'
+            #descriptionRef
+        />
+    </div>
+
+    <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Content</span>
+        </div>
+        <textarea 
+            class="form-control" 
+            aria-label="With textarea"
+            value='{{blogDetail.content }}'
+            #contentRef>
+        </textarea>
+      </div>
+
+      <div class="button">
+        <button 
+            type="button" 
+            class="btn btn-secondary" 
+            routerLink="../"
+        >
+            Cancel
+        </button>
+    
+        <button 
+            type="button" 
+            class="btn btn-primary"
+            (click)="onSubmit()"
+        >
+            Submit
+        </button>
+      </div>
+      
+</div>

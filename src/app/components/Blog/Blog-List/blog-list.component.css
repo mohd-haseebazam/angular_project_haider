@@ -1,0 +1,17 @@
+.blog-div {
+    margin-top: 20px;
+}
+
+.text {
+    font-size: 12px;
+}
+
+.readMoreLink {
+    margin-top: 10px;
+}
+
+button {
+    position: fixed;
+    top: 88%;
+    left: 86%;
+}

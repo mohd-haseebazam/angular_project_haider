@@ -1,0 +1,15 @@
+.blog-div {
+    margin: 25px 10%;
+}
+
+textarea {
+    min-height: 200px;
+}
+
+.button {
+    margin-top: 10px;
+    /* float: right; */
+}
+.button button {
+    margin-right: 10px;
+}
